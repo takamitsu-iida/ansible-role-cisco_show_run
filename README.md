@@ -3,10 +3,10 @@ show_run
 
 Cisco IOS装置に対してshow runningコマンドを実行し、出力結果をファイルに保存します。
 
-ansible-galaxyコマンドでダウンロードしたあと、フォルダの名前をロール名に変えてください。
+ansible-galaxyコマンドでダウンロードしたあと、フォルダの名前をお好みのロール名に変えてください。
 
 ```bash
-ansible-galaxy install -p ./roles git+https://github.com/takamitsu-iida/ansible-role-cisco-show-run.git
+ansible-galaxy install -p ./roles git+https://github.com/takamitsu-iida/ansible-role-cisco_show_run.git
 ```
 
 Requirements
