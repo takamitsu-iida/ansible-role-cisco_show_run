@@ -11,6 +11,7 @@ ansible-galaxy install -p ./roles git+https://github.com/takamitsu-iida/ansible-
 
 実際のログ取りではshow running-configだけではなく、いろんなコマンドを打ち込むことになると思います。
 その際にテキスト形式で残すだけではなく、CSVに加工して保存したりすると便利だと思います。
+
 応用編はこちら。
 
 <https://github.com/takamitsu-iida/ansible-role-cisco_show_commands>
