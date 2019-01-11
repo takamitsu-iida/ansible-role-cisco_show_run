@@ -1,0 +1,94 @@
+---
+
+- name: create log directory if not exists
+  delegate_to: localhost
+  file:
+    path: "{{ LOG_PATH | default('./log') }}"
+    state: directory
+    recurse: true
+  when: CREATE_LOG
+
+- name: get current time
+  set_fact:
+    # 2018-08-28@11:17:34
+    date: "{{ lookup('pipe', 'date +%Y-%m-%d@%H:%M:%S') }}"
+
+- name: set filename
+  set_fact:
+    filename: "{{ PREFIX | default('') + inventory_hostname + '_' + role_name | basename + '_' + date + '.txt' }}"
+
+-
+  block:
+    - name: run exec commands on remote nodes bia SSH
+      ios_command:
+        commands: "{{ CMD_LIST }}"
+      # delegate_to:
+      register: result
+      when:
+        - (ansible_connection is defined) and (ansible_connection == 'network_cli')
+
+    - name: set command output list as stdout
+      set_fact:
+        stdout: "{{ result.stdout }}"
+      when: "'stdout' in result"
+
+    #
+    # telnetで接続する場合はmytelnetモジュールを使います
+    # https://github.com/takamitsu-iida/ansible-mytelnet
+    #
+
+    # telnetで接続しない場合は
+    # ===ここから削除===
+
+    # - name: run exec commands on remote nodes bia Telnet
+    #   mytelnet:
+    #     commands: "{{ CMD_LIST }}"
+    #   # telnetの場合、delegate_toは必須です。制御ノードから接続するならlocalhostを指定。
+    #   # delegate_to: localhost
+    #   delegate_to: pg04
+    #   register: result
+    #   when:
+    #     - (ansible_connection is not defined) or (ansible_connection != 'network_cli')
+
+    # - set_fact:
+    #     stdout: "{{ result.stdout }}"
+    #   when:
+    #     - "'stdout' in result"
+
+    # ===ここまで削除===
+
+  rescue:
+    - name: log failed result
+      delegate_to: localhost
+      copy:
+        content: "{{ result | to_nice_json(indent=2) }}"
+        dest: "{{ LOG_PATH + '/' + '_FAILED_' + filename }}"
+      when:
+        - CREATE_LOG
+
+    - name: fail if error occured
+      fail:
+        msg: "Failed to execute command on remote device {{ inventory_hostname }}"
+
+- name: display
+  debug:
+    msg: |
+      {% for item in CMD_LIST -%}
+      === {{ item }} ===
+      {{ stdout[loop.index0] }}
+      {% endfor %}
+  when:
+    - stdout
+
+- name: save
+  delegate_to: localhost
+  copy:
+    content: |
+      {% for item in CMD_LIST -%}
+      === {{ item }} ===
+      {{ stdout[loop.index0] }}
+      {% endfor %}
+    dest: "{{ LOG_PATH + '/' + filename }}"
+  when:
+    - CREATE_LOG
+    - stdout
