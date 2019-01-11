@@ -1,6 +1,6 @@
 galaxy_info:
   role_name: cisco_show_run
-  author: Takamitsu IIDA
+  author: takamitsu-iida
   description: execute show running-config command on cisco ios device and save the output to file.
   company:
 
