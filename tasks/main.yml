@@ -6,6 +6,7 @@
     path: "{{ LOG_PATH | default('./log') }}"
     state: directory
     recurse: true
+  run_once: true
   when: CREATE_LOG
 
 - name: get current time
