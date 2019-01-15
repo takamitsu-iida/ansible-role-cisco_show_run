@@ -3,7 +3,7 @@
 
 # タイトルスライド
 
-@takamitsu-iida
+Takamitsu IIDA (@takamitsu-iida)
 
 ---
 
