@@ -6,23 +6,19 @@
 
     <title></title>
 
-    <link ref="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.min.css">
-    <!--
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/black.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
-    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
 
+    <!-- Printing and PDF exports -->
     <script>
-      // Printing and PDF exports
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
       // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      link.href = window.location.search.match(/print-pdf/gi) ? "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css" : "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
+      link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
     </script>
+
   </head>
 
   <body>
