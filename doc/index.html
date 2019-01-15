@@ -111,17 +111,7 @@
 
     });
 
-    // プレゼンテーションにするマークダウンファイルを指定する
-    const title = "cisco_show_run";
-    const markdownUrl = "//takamitsu-iida.github.io/ansible-role-cisco_show_run/doc/index.md";
-
-    document.title = title;
-    document.getElementById("slides").dataset.markdown = markdownUrl;
-
   </script>
-
-
-
 
 </head>
 
@@ -129,7 +119,9 @@
 
   <div class="reveal">
     <div class="slides" id="slides">
-      <section data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n>>>\r?\n$" data-charset="utf-8" />
+
+      <section data-markdown="index.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" data-charset="utf-8"/>
+
     </div>
   </div>
 
