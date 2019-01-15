@@ -59,70 +59,72 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script>
 
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      dependencies: [
-        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; }},
-        { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js" },
-        { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js" },
-        { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js", async: true },
-        { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js",
-          async: true,
-          callback: function() { hljs.initHighlightingOnLoad(); }
-        }
-      ],
 
-      // Display presentation control arrows
-      controls: true,
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; }},
+          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js" },
+          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js" },
+          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js", async: true },
+          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js",
+            async: true,
+            callback: function() { hljs.initHighlightingOnLoad(); }
+          }
+        ],
 
-      // Push each slide change to the browser history
-      history: false,
+        // Display presentation control arrows
+        controls: true,
 
-      // Display the page number of the current slide
-      slideNumber: false,
+        // Push each slide change to the browser history
+        history: false,
 
-      // Enable keyboard shortcuts for navigation
-      keyboard: true,
+        // Display the page number of the current slide
+        slideNumber: false,
 
-      // Vertical centering of slides
-      center: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
 
-      // Enables touch navigation on devices with touch input
-      touch: true,
+        // Vertical centering of slides
+        center: false,
 
-      // Enable slide navigation via mouse wheel
-      mouseWheel: false,
+        // Enables touch navigation on devices with touch input
+        touch: true,
 
-      // Hides the address bar on mobile devices
-      hideAddressBar: false,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
 
-      // Transition style
-      transition: "fade", // none/fade/slide/convex/concave/zoom
+        // Hides the address bar on mobile devices
+        hideAddressBar: false,
 
-      // Transition speed
-      transitionSpeed: "default", // default/fast/slow
+        // Transition style
+        transition: "fade", // none/fade/slide/convex/concave/zoom
 
-      // Transition style for full page slide backgrounds
-      backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: "default", // default/fast/slow
 
-      // Parallax background image
-      parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Transition style for full page slide backgrounds
+        backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
 
-      // Parallax background size
-      parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
+        // Parallax background image
+        parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
-      // Number of pixels to move the parallax background per slide
-      // - Calculated automatically unless specified
-      // - Set to 0 to disable movement along an axis
-      parallaxBackgroundHorizontal: null,
-      parallaxBackgroundVertical: null,
+        // Parallax background size
+        parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
 
-      // The display mode that will be used to show slides
-      display: "block"
-    });
+        // Number of pixels to move the parallax background per slide
+        // - Calculated automatically unless specified
+        // - Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: null,
+        parallaxBackgroundVertical: null,
 
+        // The display mode that will be used to show slides
+        display: "block"
+      });
+    </script>
 
   </body>
 
