@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title></title>
+    <title>index.html</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
@@ -15,92 +15,89 @@
       link.rel = 'stylesheet';
       link.type = 'text/css';
       // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/paper.css';
       document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 
   </head>
 
   <body>
-      <div class="reveal">
-          <div class="slides">
+    <div class="reveal">
+      <div class="slides">
 
+        <section data-markdown="index.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$"
+          data-separator-notes="^Note:" data-charset="utf-8">
+        </section>
 
-            <section data-markdown="index.md"
-                     data-separator="^\n---\n$"
-                     data-separator-vertical="^\n>>>\n$"
-                     data-separator-notes="^Note:"
-                     data-charset="utf-8">
-            </section>
+      </div>
+    </div>
 
-          </div>
-        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: '//cdnjs.cloudflare.com/ajax/libs/classlist/1.2.201711092/classList.min.js', condition: function () { return !document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js' },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.js' },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js', async: true },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+        ],
 
-        <script>
-          // More info about config & dependencies:
-          // - https://github.com/hakimel/reveal.js#configuration
-          // - https://github.com/hakimel/reveal.js#dependencies
-          Reveal.initialize({
-            dependencies: [
-              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js' },
-              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.js' },
-              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js', async: true },
-              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-            ],
+        // Display presentation control arrows
+        controls: true,
 
-            // Display presentation control arrows
-            controls: true,
+        // Push each slide change to the browser history
+        history: false,
 
-            // Push each slide change to the browser history
-            history: false,
+        // Display the page number of the current slide
+        slideNumber: true,
 
-            // Display the page number of the current slide
-            slideNumber: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
 
-            // Enable keyboard shortcuts for navigation
-            keyboard: true,
+        // Vertical centering of slides
+        center: false,
 
-            // Vertical centering of slides
-            center: false,
+        // Enables touch navigation on devices with touch input
+        touch: true,
 
-            // Enables touch navigation on devices with touch input
-            touch: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
 
-            // Enable slide navigation via mouse wheel
-            mouseWheel: false,
+        // Hides the address bar on mobile devices
+        hideAddressBar: false,
 
-            // Hides the address bar on mobile devices
-            hideAddressBar: false,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-            // Transition style
-            transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
 
-            // Transition speed
-            transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
 
-            // Transition style for full page slide backgrounds
-            backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Parallax background image
+        parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
-            // Parallax background image
-            parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Parallax background size
+        parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
 
-            // Parallax background size
-            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+        // Number of pixels to move the parallax background per slide
+        // - Calculated automatically unless specified
+        // - Set to 0 to disable movement along an axis
+        parallaxBackgroundHorizontal: null,
+        parallaxBackgroundVertical: null,
 
-            // Number of pixels to move the parallax background per slide
-            // - Calculated automatically unless specified
-            // - Set to 0 to disable movement along an axis
-            parallaxBackgroundHorizontal: null,
-            parallaxBackgroundVertical: null,
+        // The display mode that will be used to show slides
+        display: 'block'
 
-            // The display mode that will be used to show slides
-            display: 'block'
-
-          });
-        </script>
+      });
+    </script>
 
 
   </body>
