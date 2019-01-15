@@ -38,8 +38,8 @@
         document.getElementsByTagName("head")[0].appendChild(link);
 
         // スライド指定
-        // data-markdown="a.md" をここで指定する
-        document.getElementById("slide").dataset.markdown = "index.md"
+        // data-markdown="index..md" をここで指定する
+        // document.getElementById("slide").dataset.markdown = "index.md"
 
         // タイトル設定
         document.title = "show_run"
@@ -116,7 +116,7 @@
   <body>
     <div class="reveal">
       <div class="slides" id="slides">
-        <section data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" id="slide"></section>
+        <section data-markdown="index.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" id="slide"></section>
       </div>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
