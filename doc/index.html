@@ -1,133 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>cisco_show_run</title>
 
-  <title>reveal.jsの練習</title>
-
-  <link ref="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css">
-  <!--
+    <link
+      ref="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css"
+    />
+    <!--
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/white.min.css">
   -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css">
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css"
+    />
 
-  <!--
+    <!--
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
   -->
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css"
+    />
 
-  <!-- タイトルの大文字変換を無効にする -->
-  <style type="text/css">
-    .reveal h1,
-    .reveal h2,
-    .reveal h3,
-    .reveal h4,
-    .reveal h5,
-    .reveal h6 {
-      text-transform: none;
-    }
-  </style>
+    <!-- タイトルの大文字変換を無効にする -->
+    <style type="text/css">
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        text-transform: none;
+      }
+    </style>
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
+    <script>
+      window.addEventListener("load", () => {
+        // Printing and PDF exports
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        link.href = window.location.search.match(/print-pdf/gi)
+          ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css"
+          : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css";
+        document.getElementsByTagName("head")[0].appendChild(link);
 
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+          dependencies: [
+            {
+              src:
+                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js"
+            },
+            {
+              src:
+                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js"
+            },
+            {
+              src:
+                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js",
+              async: true
+            },
+            {
+              src:
+                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js",
+              async: true,
+              callback: function() {
+                hljs.initHighlightingOnLoad();
+              }
+            }
+          ],
 
+          // Display presentation control arrows
+          controls: true,
 
-  <script>
+          // Push each slide change to the browser history
+          history: false,
 
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      dependencies: [
-        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js' },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js' },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js', async: true },
-        {
-          src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js',
-          async: true,
-          callback: function () { hljs.initHighlightingOnLoad(); }
-        }
-      ],
+          // Display the page number of the current slide
+          slideNumber: false,
 
-      // Display presentation control arrows
-      controls: true,
+          // Enable keyboard shortcuts for navigation
+          keyboard: true,
 
-      // Push each slide change to the browser history
-      history: false,
+          // Vertical centering of slides
+          center: false,
 
-      // Display the page number of the current slide
-      slideNumber: false,
+          // Enables touch navigation on devices with touch input
+          touch: true,
 
-      // Enable keyboard shortcuts for navigation
-      keyboard: true,
+          // Enable slide navigation via mouse wheel
+          mouseWheel: false,
 
-      // Vertical centering of slides
-      center: false,
+          // Hides the address bar on mobile devices
+          hideAddressBar: false,
 
-      // Enables touch navigation on devices with touch input
-      touch: true,
+          // Transition style
+          transition: "fade", // none/fade/slide/convex/concave/zoom
 
-      // Enable slide navigation via mouse wheel
-      mouseWheel: false,
+          // Transition speed
+          transitionSpeed: "default", // default/fast/slow
 
-      // Hides the address bar on mobile devices
-      hideAddressBar: false,
+          // Transition style for full page slide backgrounds
+          backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
 
-      // Transition style
-      transition: 'fade', // none/fade/slide/convex/concave/zoom
+          // Parallax background image
+          parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
-      // Transition speed
-      transitionSpeed: 'default', // default/fast/slow
+          // Parallax background size
+          parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
 
-      // Transition style for full page slide backgrounds
-      backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+          // Number of pixels to move the parallax background per slide
+          // - Calculated automatically unless specified
+          // - Set to 0 to disable movement along an axis
+          parallaxBackgroundHorizontal: null,
+          parallaxBackgroundVertical: null,
 
-      // Parallax background image
-      parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+          // The display mode that will be used to show slides
+          display: "block"
+        });
+      });
+    </script>
+  </head>
 
-      // Parallax background size
-      parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
-
-      // Number of pixels to move the parallax background per slide
-      // - Calculated automatically unless specified
-      // - Set to 0 to disable movement along an axis
-      parallaxBackgroundHorizontal: null,
-      parallaxBackgroundVertical: null,
-
-      // The display mode that will be used to show slides
-      display: 'block'
-
-    });
-
-  </script>
-
-</head>
-
-<body>
-
-  <div class="reveal">
-    <div class="slides" id="slides">
-
-      <section data-markdown="index.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" data-charset="utf-8"/>
-
+  <body>
+    <div class="reveal">
+      <div class="slides" id="slides">
+        <section
+          data-markdown="index.md"
+          data-separator="^\n---\n$"
+          data-separator-vertical="^\n>>>\n$"
+          data-separator-notes="^Note:"
+        ></section>
+      </div>
     </div>
-  </div>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
-
-</body>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
+  </body>
 </html>
