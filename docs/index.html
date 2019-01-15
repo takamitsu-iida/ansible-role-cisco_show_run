@@ -6,17 +6,12 @@
 
     <title></title>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.min.css" />
-
-
-    <!--
     <link ref="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/white.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css">
+    <!--
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css">
     -->
 
     <!-- タイトルの大文字変換を無効にする -->
@@ -42,9 +37,9 @@
         link.href = window.location.search.match(/print-pdf/gi) ? "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css" : "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css";
         document.getElementsByTagName("head")[0].appendChild(link);
 
-        // Slide指定
-        // data-markdown="a.md"を指定するのと同じ
-        // document.getElementById("slide").dataset.markdown = "a.md"
+        // スライド指定
+        // data-markdown="a.md" をここで指定する
+        document.getElementById("slide").dataset.markdown = "index.md"
 
         // タイトル設定
         document.title = "show_run"
@@ -54,11 +49,11 @@
         // - https://github.com/hakimel/reveal.js#dependencies
         Reveal.initialize({
           dependencies: [
-            { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; }},
-            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js" },
-            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js" },
-            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js", async: true },
-            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js",
+            { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/classList.js', condition: function() { return !document.body.classList; }},
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js" },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js" },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js", async: true },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js",
               async: true,
               callback: function() { hljs.initHighlightingOnLoad(); }
             }
@@ -121,39 +116,11 @@
   <body>
     <div class="reveal">
       <div class="slides" id="slides">
-        <!--
-        <section data-markdown="a.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" id="slide"></section>
-        -->
-        <section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$" data-notes="^Note:">
-          <script type="text/template">
-## はじめに
-
----
-
-## ２枚目のページ
-
-- 起: 事実や出来事を述べる
-- 承: 『起』で述べたことに関することを述べる
-- 転: 『起承』とは関係のない別のことがらを持ち出す
-- 結: 全体を関連づけてしめくくる
-
----
-
-## P3
-
-- 起: 事実や出来事を述べる
-- 承: 『起』で述べたことに関することを述べる
-- 転: 『起承』とは関係のない別のことがらを持ち出す
-- 結: 全体を関連づけてしめくくる
-
-          </script>
-        </section>
-
-
+        <section data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" id="slide"></section>
       </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.min.js"></script>
   </body>
 
 </html>
