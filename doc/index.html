@@ -64,7 +64,7 @@
     Reveal.initialize({
       dependencies: [
         { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js' },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.js' },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js' },
         { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js', async: true },
         {
           src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js',
@@ -122,15 +122,16 @@
       display: 'block'
 
     });
-  </script>
 
-  <!-- プレゼンテーションにするマークダウンファイルを指定する -->
-  <script>
-    const title = "cisco_show_run";
-    document.title = title;
+    Reveal.addEventListener("ready", (event) => {
+      // プレゼンテーションにするマークダウンファイルを指定する
+      const title = "cisco_show_run";
+      const markdownUrl = "index.md";
 
-    const markdownUrl = "index.md";
-    document.getElementById("slides").dataset.markdown = markdownUrl;
+      document.title = title;
+      document.getElementById("slides").dataset.markdown = markdownUrl;
+    });
+
   </script>
 
 </body>
