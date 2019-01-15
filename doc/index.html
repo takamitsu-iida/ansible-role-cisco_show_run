@@ -45,6 +45,7 @@
 
     <script>
       window.addEventListener("load", () => {
+
         // Printing and PDF exports
         var link = document.createElement("link");
         link.rel = "stylesheet";
@@ -52,6 +53,9 @@
         // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         link.href = window.location.search.match(/print-pdf/gi) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css";
         document.getElementsByTagName("head")[0].appendChild(link);
+
+        // Slide指定
+        document.getElementById("slide").dataset.markdown = "index.md"
 
         // More info about config & dependencies:
         // - https://github.com/hakimel/reveal.js#configuration
@@ -115,6 +119,12 @@
           // The display mode that will be used to show slides
           display: "block"
         });
+
+        Reveal.addEventListener("ready", (event) => {
+          // タイトル設定
+          document.title = "show_run"
+        });
+
       });
 
     </script>
@@ -124,10 +134,10 @@
     <div class="reveal">
       <div class="slides" id="slides">
         <section
-          data-markdown="//takamitsu-iida.github.io/ansible-role-cisco_show_run/doc/index.md"
           data-separator="^\n---\n$"
           data-separator-vertical="^\n>>>\n$"
           data-separator-notes="^Note:"
+          id="slide"
         ></section>
       </div>
     </div>
