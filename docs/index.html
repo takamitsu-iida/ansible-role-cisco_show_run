@@ -47,7 +47,7 @@
         // document.getElementById("slide").dataset.markdown = "a.md"
 
         // タイトル設定
-        // document.title = "show_run"
+        document.title = "show_run"
 
         // More info about config & dependencies:
         // - https://github.com/hakimel/reveal.js#configuration
@@ -120,7 +120,26 @@
   <body>
     <div class="reveal">
       <div class="slides" id="slides">
+        <!--
         <section data-markdown="b.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" id="slide"></section>
+        -->
+        <section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$" data-notes="^Note:">
+          <script type="text/template">
+# p1
+
+---
+
+# p2
+
+---
+
+# p3
+
+
+          </script>
+        </section>
+
+
       </div>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
