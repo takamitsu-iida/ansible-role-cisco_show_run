@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.jsの練習</title>
+
+  <link ref="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/white.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/black.min.css">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!-- タイトルの大文字変換を無効にする -->
+  <style type="text/css">
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal h5,
+    .reveal h6 {
+      text-transform: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides" id="slides">
+      <section data-markdown="" data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n>>>\r?\n$" data-charset="utf-8">
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
+
+  <script>
+
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js' },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.js' },
+        { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js', async: true },
+        {
+          src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js',
+          async: true,
+          callback: function () { hljs.initHighlightingOnLoad(); }
+        }
+      ],
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Push each slide change to the browser history
+      history: false,
+
+      // Display the page number of the current slide
+      slideNumber: false,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+      // Vertical centering of slides
+      center: false,
+
+      // Enables touch navigation on devices with touch input
+      touch: true,
+
+      // Enable slide navigation via mouse wheel
+      mouseWheel: false,
+
+      // Hides the address bar on mobile devices
+      hideAddressBar: false,
+
+      // Transition style
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // Transition speed
+      transitionSpeed: 'default', // default/fast/slow
+
+      // Transition style for full page slide backgrounds
+      backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // Parallax background image
+      parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+      // Parallax background size
+      parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+      // Number of pixels to move the parallax background per slide
+      // - Calculated automatically unless specified
+      // - Set to 0 to disable movement along an axis
+      parallaxBackgroundHorizontal: null,
+      parallaxBackgroundVertical: null,
+
+      // The display mode that will be used to show slides
+      display: 'block'
+
+    });
+  </script>
+
+  <!-- プレゼンテーションにするマークダウンファイルを指定する -->
+  <script>
+    const title = "cisco_show_run";
+    document.title = title;
+
+    const markdownUrl = "//takamitsu-iida.github.io/ansible-role-cisco_show_run/README.md";
+    document.getElementById("slide").dataset.markdown = markdownUrl;
+  </script>
+
+</body>
+
+</html>
