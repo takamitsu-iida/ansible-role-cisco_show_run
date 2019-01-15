@@ -1,4 +1,9 @@
+<!-- markdownlint-disable MD012 -->
+<!-- markdownlint-disable MD036 -->
+
 # タイトルスライド
+
+@takamitsu-iida
 
 ---
 
