@@ -20,16 +20,6 @@
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/css/zenburn.min.css">
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
-
   <!-- タイトルの大文字変換を無効にする -->
   <style type="text/css">
     .reveal h1,
@@ -42,18 +32,17 @@
     }
   </style>
 
-</head>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 
-<body>
 
-  <div class="reveal">
-    <div class="slides" id="slides">
-      <section data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n>>>\r?\n$" data-charset="utf-8" />
-    </div>
-  </div>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
 
   <script>
 
@@ -130,6 +119,22 @@
     document.getElementById("slides").dataset.markdown = markdownUrl;
 
   </script>
+
+
+
+
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides" id="slides">
+      <section data-separator="^\r?\n---\r?\n$" data-separator-vertical="^\r?\n>>>\r?\n$" data-charset="utf-8" />
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"></script>
 
 </body>
 
