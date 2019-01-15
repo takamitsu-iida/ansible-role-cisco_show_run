@@ -50,9 +50,7 @@
         link.rel = "stylesheet";
         link.type = "text/css";
         // link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        link.href = window.location.search.match(/print-pdf/gi)
-          ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css"
-          : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css";
+        link.href = window.location.search.match(/print-pdf/gi) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/paper.css";
         document.getElementsByTagName("head")[0].appendChild(link);
 
         // More info about config & dependencies:
@@ -60,26 +58,12 @@
         // - https://github.com/hakimel/reveal.js#dependencies
         Reveal.initialize({
           dependencies: [
-            {
-              src:
-                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js"
-            },
-            {
-              src:
-                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js"
-            },
-            {
-              src:
-                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js",
-              async: true
-            },
-            {
-              src:
-                "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js",
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js" },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js" },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js", async: true },
+            { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/highlight/highlight.js",
               async: true,
-              callback: function() {
-                hljs.initHighlightingOnLoad();
-              }
+              callback: function() { hljs.initHighlightingOnLoad(); }
             }
           ],
 
@@ -132,6 +116,7 @@
           display: "block"
         });
       });
+
     </script>
   </head>
 
@@ -139,7 +124,7 @@
     <div class="reveal">
       <div class="slides" id="slides">
         <section
-          data-markdown="index.md"
+          data-markdown="//takamitsu-iida.github.io/ansible-role-cisco_show_run/doc/index.md"
           data-separator="^\n---\n$"
           data-separator-vertical="^\n>>>\n$"
           data-separator-notes="^Note:"
