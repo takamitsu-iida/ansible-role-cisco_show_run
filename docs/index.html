@@ -26,79 +26,86 @@
   </head>
 
   <body>
-    <div class="reveal">
-      <div class="slides" id="slides">
-        <section id="slide" data-markdown="index.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-separator-notes="^Note:" data-charset="utf-8"></section>
-      </div>
-    </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script>
+      <div class="reveal">
+          <div class="slides">
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        dependencies: [
-          { src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; }},
-          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js" },
-          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js" },
-          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js", async: true },
-          { src: "//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js",
-            async: true,
-            callback: function() { hljs.initHighlightingOnLoad(); }
-          }
-        ],
 
-        // Display presentation control arrows
-        controls: true,
+            <section data-markdown="index.md"
+                     data-separator="^\n---\n$"
+                     data-separator-vertical="^\n>>>\n$"
+                     data-separator-notes="^Note:"
+                     data-charset="utf-8">
+            </section>
 
-        // Push each slide change to the browser history
-        history: false,
+          </div>
+        </div>
 
-        // Display the page number of the current slide
-        slideNumber: false,
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
 
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
+        <script>
+          // More info about config & dependencies:
+          // - https://github.com/hakimel/reveal.js#configuration
+          // - https://github.com/hakimel/reveal.js#dependencies
+          Reveal.initialize({
+            dependencies: [
+              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js' },
+              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.js' },
+              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js', async: true },
+              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+            ],
 
-        // Vertical centering of slides
-        center: false,
+            // Display presentation control arrows
+            controls: true,
 
-        // Enables touch navigation on devices with touch input
-        touch: true,
+            // Push each slide change to the browser history
+            history: false,
 
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+            // Display the page number of the current slide
+            slideNumber: true,
 
-        // Hides the address bar on mobile devices
-        hideAddressBar: false,
+            // Enable keyboard shortcuts for navigation
+            keyboard: true,
 
-        // Transition style
-        transition: "fade", // none/fade/slide/convex/concave/zoom
+            // Vertical centering of slides
+            center: false,
 
-        // Transition speed
-        transitionSpeed: "default", // default/fast/slow
+            // Enables touch navigation on devices with touch input
+            touch: true,
 
-        // Transition style for full page slide backgrounds
-        backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
+            // Enable slide navigation via mouse wheel
+            mouseWheel: false,
 
-        // Parallax background image
-        parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+            // Hides the address bar on mobile devices
+            hideAddressBar: false,
 
-        // Parallax background size
-        parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
+            // Transition style
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-        // Number of pixels to move the parallax background per slide
-        // - Calculated automatically unless specified
-        // - Set to 0 to disable movement along an axis
-        parallaxBackgroundHorizontal: null,
-        parallaxBackgroundVertical: null,
+            // Transition speed
+            transitionSpeed: 'default', // default/fast/slow
 
-        // The display mode that will be used to show slides
-        display: "block"
-      });
-    </script>
+            // Transition style for full page slide backgrounds
+            backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
+
+            // Parallax background image
+            parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+            // Parallax background size
+            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+            // Number of pixels to move the parallax background per slide
+            // - Calculated automatically unless specified
+            // - Set to 0 to disable movement along an axis
+            parallaxBackgroundHorizontal: null,
+            parallaxBackgroundVertical: null,
+
+            // The display mode that will be used to show slides
+            display: 'block'
+
+          });
+        </script>
+
 
   </body>
 
