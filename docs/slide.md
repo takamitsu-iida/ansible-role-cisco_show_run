@@ -55,7 +55,7 @@ ansible-galaxy install -p ./roles
 ```yml
   tasks:
 
-    - <span style= "color: red">include_role:</span>
+    - include_role:
         name: cisco_show_run
 
     - 設定変更するタスク
