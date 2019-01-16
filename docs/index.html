@@ -42,8 +42,15 @@
 
       .reveal ul {
         display: block;
-        list-style-type: square;  /* ■ マーカー */
+        list-style: none;
+        /* list-style-type: square; */  /* ■ マーカー */
       }
+
+      .reveal li:before {
+          content: "■ ";
+      }
+
+
 
       .reveal ol {
         display: block;
