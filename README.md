@@ -287,3 +287,9 @@ Current configuration : 3143 bytes
 
 stdout_callback = debug
 ```
+
+<br/><br/><br/>
+
+### presentation decks
+
+<https://takamitsu-iida.github.io/ansible-role-cisco_show_run/decks/>
