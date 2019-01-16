@@ -12,7 +12,7 @@ show running-configの出力をファイルに保存するロールです。
 
 <br><br>
 
-Takamitsu IIDA (@takamitsu-iida)
+##### Takamitsu IIDA (@takamitsu-iida)
 
 ---
 
