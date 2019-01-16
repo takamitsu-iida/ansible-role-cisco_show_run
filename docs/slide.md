@@ -53,10 +53,6 @@ ansible-galaxy install -p ./roles
 - 設定変更するタスクの前後に挿入するとよいでしょう。
 
 ```yml
-- name: show running-config
-  hosts: routers
-  gather_facts: false
-
   tasks:
 
     - include_role:
@@ -95,10 +91,6 @@ log
 - ファイル名の先頭で区別を付けたい場合は、ロールを呼び出すときにPREFIX変数を上書きします。
 
 ```yml
-- name: show running-config
-  hosts: routers
-  gather_facts: false
-
   tasks:
 
     - include_role:
@@ -139,10 +131,6 @@ log/
 - 作業前と作業後でログ置き場を変えたい場合は、変数LOG_PATHを変更します。
 
 ```yml
-- name: show running-config
-  hosts: routers
-  gather_facts: false
-
   tasks:
 
     - include_role:
