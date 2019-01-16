@@ -30,7 +30,8 @@ show running-configの出力をファイルに保存するロールです。
 ### ロールの置き場
 
 - 作成したロールはgithubに置いておくと便利です。
-- githubのリポジトリ名はansible-role-を先頭に付けるのが慣例のようです
+- githubのリポジトリ名はansible-role-を先頭に付けるのが慣例のようです。
+- このロールの場合はansible-role-cisco_show_runがリポジトリ名です。
 
 ---
 
@@ -43,8 +44,8 @@ ansible-galaxy install -p ./roles
  git+https://github.com/takamitsu-iida/ansible-role-cisco_show_run.git
 ```
 
-- cisco_show_runというフォルダ名でインストールされます
-- ご希望のロール名に合わせてフォルダ名を変えてください
+- cisco_show_runというフォルダ名でインストールされます。
+- ご希望のロール名に合わせてフォルダ名を変えてください。
 
 ---
 
@@ -170,7 +171,10 @@ log
 
 ### まとめ
 
+<br/><br/>
+
 - ログをファイルに保存するロールを作っておくと便利です。
+- 作成したロールはgitで管理すると便利です。
 
 ---
 
@@ -180,8 +184,10 @@ log
 
 ## 実は意外にめんどくさい
 
+<br/><br/>
+
 - ログをファイルに残すだけでも、ゼロから作ると面倒です。
-- 以下、豆知識です
+- 以下、豆知識です。
 
 ---
 
