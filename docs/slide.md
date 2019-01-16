@@ -23,11 +23,15 @@ Takamitsu IIDA (@takamitsu-iida)
 
 ---
 
-### ロールのインストール方法
+### ロールの置き場
 
 作成したロールはgithubに置いておくと便利です。
 
-- リポジトリ名はansible-roleで始めるのが慣例のようです
+- githubのリポジトリ名はansible-role-を先頭に付けるのが慣例のようです
+
+---
+
+### ロールのインストール
 
 ansible-galaxyコマンド一発でロールをインストールできます。
 
@@ -36,9 +40,8 @@ ansible-galaxy install -p ./roles
  git+https://github.com/takamitsu-iida/ansible-role-cisco_show_run.git
 ```
 
-- -pでロールを格納するフォルダを指定します。
 - cisco_show_runというフォルダ名でインストールされます
-- ご希望のロール名に合わせてフォルダ名を変えてください。
+- ご希望のロール名に合わせてフォルダ名を変えてください
 
 ---
 
