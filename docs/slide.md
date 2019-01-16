@@ -210,7 +210,6 @@ LOG_PATH: "{{ lookup('env', 'PWD') }}"
     state: directory
     recurse: true
   run_once: true
-  when: CREATE_LOG
 ```
 
 ---
