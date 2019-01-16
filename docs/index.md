@@ -3,7 +3,11 @@
 
 # Ansible Role
 
+<br>
+
 ## show running-configの出力をファイルに保存するロール
+
+<br><br>
 
 Takamitsu IIDA (@takamitsu-iida)
 
@@ -19,7 +23,7 @@ ansible-galaxy install -p ./roles git+https://github.com/takamitsu-iida/ansible-
 
 ---
 
-## 使い方
+### 使い方
 
 設定変更するタスクの前後に挿入するとよいでしょう。
 
@@ -40,5 +44,5 @@ ansible-galaxy install -p ./roles git+https://github.com/takamitsu-iida/ansible-
 
 ---
 
-## 変数
+### 変数
 
