@@ -290,6 +290,6 @@ stdout_callback = debug
 
 <br/><br/><br/>
 
-### presentation decks
+### presentation deck
 
-<https://takamitsu-iida.github.io/ansible-role-cisco_show_run/decks/>
+<https://takamitsu-iida.github.io/decks/ansible-role-cisco_show_run/>
